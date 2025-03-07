@@ -1,0 +1,391 @@
+{
+	"info": {
+		"_postman_id": "9d0cdfb3-df74-42a0-ac74-72c77e1c6d44",
+		"name": "edge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39420918"
+	},
+	"item": [
+		{
+			"name": "Post-request",
+			"item": [
+				{
+					"name": "Book-Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"string\",\r\n  \"collectionOfIsbns\": [\r\n    {\r\n      \"isbn\": \"string\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/BookStore/v1/Books",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/Account/v1/User",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"User"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "saved-user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userName\": \"supto\",\r\n  \"password\": \"123456supt@Boss\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://demoqa.com/Account/v1/User",
+									"protocol": "https",
+									"host": [
+										"demoqa",
+										"com"
+									],
+									"path": [
+										"Account",
+										"v1",
+										"User"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.17.10 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Oct 2024 19:43:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "79"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4f-koLwmWJv5wdpkVke+7wU8lVXUgY\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userID\": \"d989ed39-f17e-498d-8205-f7e1f8260bbf\",\n    \"username\": \"supto\",\n    \"books\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "generated-token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/Account/v1/GenerateToken",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"GenerateToken"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "save-token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userName\": \"supto\",\r\n  \"password\": \"123456supt@Boss\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://demoqa.com/Account/v1/GenerateToken",
+									"protocol": "https",
+									"host": [
+										"demoqa",
+										"com"
+									],
+									"path": [
+										"Account",
+										"v1",
+										"GenerateToken"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.17.10 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Oct 2024 19:47:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "278"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"116-vmENoLSExbQUwydVOU7PbO9kdY4\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InN1cHRvIiwicGFzc3dvcmQiOiIxMjM0NTZzdXB0QEJvc3MiLCJpYXQiOjE3MzA0MDQwMzJ9.qGq80wwE2n-r7AIWUx1eePvkiDY8UlTcVkz_nd14hsk\",\n    \"expires\": \"2024-11-07T19:47:12.533Z\",\n    \"status\": \"Success\",\n    \"result\": \"User authorized successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Authorized",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/Account/v1/Authorized",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"Authorized"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get-request",
+			"item": [
+				{
+					"name": "user-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123456supt@Boss",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "supto",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/Account/v1/User/d989ed39-f17e-498d-8205-f7e1f8260bbf",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"User",
+								"d989ed39-f17e-498d-8205-f7e1f8260bbf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/BookStore/v1/Books",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isbn-books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demoqa.com/BookStore/v1/Book?ISBN=string",
+							"protocol": "https",
+							"host": [
+								"demoqa",
+								"com"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Book"
+							],
+							"query": [
+								{
+									"key": "ISBN",
+									"value": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
